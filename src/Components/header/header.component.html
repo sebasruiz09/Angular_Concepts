@@ -1,0 +1,66 @@
+<!-- interpolation Concept -->
+<h1>message : {{ getMessage() }}</h1>
+
+<!-- Template reference concept --> 
+<div (keyup)="0">
+<input #user type="text" placeholder="username" />
+{{user.value}}</div>
+
+<br>
+<br>
+
+<!-- Property binding concept -->
+<button [disabled]="disabledButton" >add count</button>
+
+<br>
+<br>
+
+<!-- Event binding concept -->
+<button (click)="handleClick()">add count</button>
+<p>{{count}}</p>
+
+<br>
+<br>
+
+<!-- passed args to Event binding -->
+<label>username</label>
+<br>
+<input type="text" placeholder="username" (input)="changeName($event)" />
+<br>
+{{ username}}
+
+<br>
+<br>
+<!-- Two way binding Concept -->
+<label>username two</label>
+<br>
+<input type="text" placeholder="username" [(ngModel)]="secondName" />
+<br>
+{{ secondName}}
+<br>
+<button (click)="sendData()">send data</button>
+
+<br>
+<br>
+<!-- calculador Exercises -->
+<label>First Number</label>
+<br>
+<input type="number" placeholder="First Number" [(ngModel)]="numberOne" />
+<br>
+<label>Second Number</label>
+<br>
+<input type="number" placeholder="Second Number" [(ngModel)]="numberTwo" />
+<br>
+<button (click)="sum()">sumar</button>
+<p>{{ result }}</p>
+
+<!-- *ngif directive Concept -->
+<!-- content template based to conditional render -->
+<p *ngIf="changeMessage">{{ conditionalMessage }}</p>
+<br>
+<button (click)="changeConditionalMessage()">change Message</button>
+<br>
+
+<!-- *ngfor directive Concept -->
+<!-- content template based to conditional render -->
+
