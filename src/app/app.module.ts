@@ -6,6 +6,8 @@ import HeaderComponent from 'src/Components/header/header.component';
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
 import { PersonsComponent } from './persons/persons.component';
+import { ChildComponent } from './child/child.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   // components declaration
@@ -13,6 +15,8 @@ import { PersonsComponent } from './persons/persons.component';
     AppComponent,
     HeaderComponent,
     PersonsComponent,
+    ChildComponent,
+    FormComponent,
 
   ],
   // modules declaration

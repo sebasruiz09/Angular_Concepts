@@ -1,11 +1,12 @@
 <!-- ngFor directive Concept -->
-{{title}}
-<div *ngFor="let person of persons">
-    <p>{{person.name}} {{person.lastName}}</p>
-</div>
 
 <form>
     <input type="text" name="name" placeholder="name" [(ngModel)]="name" />
     <input type="text" name="lastname" placeholder="lastname" [(ngModel)]="lastName" />
     <button type="submit" (click)="addPerson()">Add</button>
 </form>
+
+<!-- Property blinding come in components -->
+<app-child *ngFor="let person of persons"
+ [person]="person" >
+</app-child>
